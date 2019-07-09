@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Django项目之Dailyfresh实战日志一]]></title>
+    <url>%2F2019%2F07%2F09%2FDjango%E9%A1%B9%E7%9B%AE%E4%B9%8BDailyfresh%E5%AE%9E%E6%88%98%2F</url>
+    <content type="text"><![CDATA[环境MacOS 10.14.5python 3.7.3Django 2.1.4框架搭建 新建项目 1Django-admin startproject dailyfresh 新建应用 1234python3 manage.py startapp userpython3 manage.py startapp goodspython3 manage.py startapp cartpython3 manage.py startapp order]]></content>
+      <categories>
+        <category>Django</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>Django</tag>
+        <tag>电商</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[我的第一篇文章]]></title>
     <url>%2F2019%2F06%2F09%2F%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0%2F</url>
     <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post"]]></content>
