@@ -558,7 +558,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  611
+                  608
                 </span>
               
 
@@ -596,8 +596,7 @@
 
       
         
-          
-            <h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><h5 id="MacOS-10-14-5"><a href="#MacOS-10-14-5" class="headerlink" title="MacOS 10.14.5"></a>MacOS 10.14.5</h5><h5 id="python-3-7-3"><a href="#python-3-7-3" class="headerlink" title="python 3.7.3"></a>python 3.7.3</h5><h5 id="Django-2-1-4"><a href="#Django-2-1-4" class="headerlink" title="Django 2.1.4"></a>Django 2.1.4</h5><h3 id="框架搭建"><a href="#框架搭建" class="headerlink" title="框架搭建"></a>框架搭建</h3><ul>
+          <h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><h5 id="MacOS-10-14-5"><a href="#MacOS-10-14-5" class="headerlink" title="MacOS 10.14.5"></a>MacOS 10.14.5</h5><h5 id="python-3-7-3"><a href="#python-3-7-3" class="headerlink" title="python 3.7.3"></a>python 3.7.3</h5><h5 id="Django-2-1-4"><a href="#Django-2-1-4" class="headerlink" title="Django 2.1.4"></a>Django 2.1.4</h5><h3 id="框架搭建"><a href="#框架搭建" class="headerlink" title="框架搭建"></a>框架搭建</h3><ul>
 <li><p>新建项目</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Django-admin startproject dailyfresh</span><br></pre></td></tr></table></figure>
 </li>
@@ -616,36 +615,13 @@
 
 </li>
 </ul>
-<p>&lt; !–more–&gt;</p>
-<ul>
-<li><p>关于templates</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">TEMPLATES = [</span><br><span class="line">    &#123;</span><br><span class="line">        &apos;BACKEND&apos;: &apos;django.template.backends.django.DjangoTemplates&apos;,</span><br><span class="line">        &apos;DIRS&apos;: [os.path.join(BASE_DIR, &apos;templates&apos;)],</span><br><span class="line">        &apos;APP_DIRS&apos;: True,</span><br><span class="line">        &apos;OPTIONS&apos;: &#123;</span><br><span class="line">            &apos;context_processors&apos;: [</span><br><span class="line">                &apos;django.template.context_processors.debug&apos;,</span><br><span class="line">                &apos;django.template.context_processors.request&apos;,</span><br><span class="line">                &apos;django.contrib.auth.context_processors.auth&apos;,</span><br><span class="line">                &apos;django.contrib.messages.context_processors.messages&apos;,</span><br><span class="line">            ],</span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>关于应用定义</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">INSTALLED_APPS = [</span><br><span class="line">    &apos;django.contrib.admin&apos;,</span><br><span class="line">    &apos;django.contrib.auth&apos;,</span><br><span class="line">    &apos;django.contrib.contenttypes&apos;,</span><br><span class="line">    &apos;django.contrib.sessions&apos;,</span><br><span class="line">    &apos;django.contrib.messages&apos;,</span><br><span class="line">    &apos;django.contrib.staticfiles&apos;,</span><br><span class="line">    &apos;tinymce&apos;,  # 富文本编辑器</span><br><span class="line">    &apos;apps.user&apos;,</span><br><span class="line">    &apos;apps.goods&apos;,</span><br><span class="line">    &apos;apps.cart&apos;,</span><br><span class="line">    &apos;apps.order&apos;,</span><br><span class="line"></span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>关于数据库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">DATABASES = &#123;</span><br><span class="line">    &apos;default&apos;: &#123;</span><br><span class="line">        &apos;ENGINE&apos;: &apos;django.db.backends.mysql&apos;,</span><br><span class="line">        &apos;NAME&apos;: &apos;dailyfresh&apos;,</span><br><span class="line">        &apos;USER&apos;: &apos;root&apos;,</span><br><span class="line">        &apos;PASSWORD&apos;: &apos;******&apos;,</span><br><span class="line">        &apos;HOST&apos;: &apos;127.0.0.1&apos;,</span><br><span class="line">        &apos;PORT&apos;: &apos;3306&apos;,</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>关于用户表</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># django认证系统使用的模型类</span><br><span class="line">AUTH_USER_MODEL = &apos;user.User&apos;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>关于时区和语言</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">LANGUAGE_CODE = &apos;zh-hans&apos;</span><br><span class="line">TIME_ZONE = &apos;Asia/Shanghai&apos;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>关于富文本编辑器</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 富文本编辑器配置</span><br><span class="line">TINYMCE_DEFAULT_CONFIG = &#123;</span><br><span class="line">    &apos;theme&apos;: &apos;advanced&apos;,</span><br><span class="line">    &apos;width&apos;: 600,</span><br><span class="line">    &apos;height&apos;:  400,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ul>
-<h3 id="项目urls-py设置"><a href="#项目urls-py设置" class="headerlink" title="项目urls.py设置"></a>项目urls.py设置</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">from django.contrib import admin</span><br><span class="line">from django.urls import path, include</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">urlpatterns = [</span><br><span class="line">    path(&apos;admin/&apos;, admin.site.urls),</span><br><span class="line">    path(&apos;tinymce/&apos;, include(&apos;tinymce.urls&apos;)),  # 富文本编辑器</span><br><span class="line">    # path(&apos;search/&apos;, include(&apos;haystack.urls&apos;)),  # 全文检索框架</span><br><span class="line">    path(&apos;user/&apos;, include(&apos;user.urls&apos;, namespace=&apos;user&apos;)),  # 用户模块</span><br><span class="line">    path(&apos;cart/&apos;, include(&apos;cart.urls&apos;, namespace=&apos;cart&apos;)),  # 购物车模块</span><br><span class="line">    path(&apos;order/&apos;, include(&apos;order.urls&apos;, namespace=&apos;order&apos;)),  # 订单模块</span><br><span class="line">    path(&apos;&apos;, include(&apos;goods.urls&apos;, namespace=&apos;goods&apos;)),  # 商品模块</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<h3 id="各应用urls-py设置"><a href="#各应用urls-py设置" class="headerlink" title="各应用urls.py设置"></a>各应用urls.py设置</h3><p>加入app = ‘应用名’，否则迁移出错</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">from django.conf.urls import url</span><br><span class="line">from apps.goods import views</span><br><span class="line"></span><br><span class="line">app_name = &apos;goods&apos;  # 迁移过程中报错，加入这段代码解决，原因不明</span><br><span class="line">urlpatterns = [</span><br><span class="line">    url(r&quot;^$&quot;, views.index, name=&quot;index&quot;),  # 首页</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
-
-<h3 id="各应用model-py设置"><a href="#各应用model-py设置" class="headerlink" title="各应用model.py设置"></a>各应用model.py设置</h3><p>与表和关系设计有关，ER图辅助设计。迁移后可根据建立的数据库可以用MySQLWorkbench生成ER图。<br><img src="https://www.weixinmenu.cn/hexoimages/dailyfresh.png" alt="ER图" title="ER图"></p>
-
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/07/09/Django项目之Dailyfresh实战/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
@@ -830,7 +806,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">910</span>
+    <span title="Site words total count">907</span>
   
 </div>
 
