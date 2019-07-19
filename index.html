@@ -294,6 +294,293 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://watfall.github.io/2019/07/20/Ubuntu常用命令大全/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Watfall大叔">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/header.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="抠脚大叔的“胶水”坊">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/07/20/Ubuntu常用命令大全/" itemprop="url">Ubuntu常用命令大全</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-07-20T00:53:16+08:00">
+                2019-07-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Ubuntu/" itemprop="url" rel="index">
+                    <span itemprop="name">Ubuntu</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计&#58;</span>
+                
+                <span title="字数统计">
+                  870
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">
+                  3
+                </span>
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Ubuntu常用命令大全"><a href="#Ubuntu常用命令大全" class="headerlink" title="Ubuntu常用命令大全"></a>Ubuntu常用命令大全</h2><h3 id="一、文件-文件夹管理"><a href="#一、文件-文件夹管理" class="headerlink" title="一、文件/文件夹管理"></a>一、文件/文件夹管理</h3><ul>
+<li><p>ls 列出当前目录文件（不包括隐含文件） </p>
+</li>
+<li><p>ls -a 列出当前目录文件（包括隐含文件） </p>
+</li>
+<li><p>ls -l 列出当前目录下文件的详细信息 </p>
+</li>
+<li><p>cd .. 回当前目录的上一级目录 </p>
+</li>
+<li><p>cd - 回上一次所在的目录 </p>
+</li>
+<li><p>cd ~ 或 cd 回当前用户的宿主目录 </p>
+</li>
+<li><p>mkdir 目录名 创建一个目录 </p>
+</li>
+<li><p>rmdir 空目录名 删除一个空目录 </p>
+</li>
+<li><p>rm 文件名 文件名 删除一个文件或多个文件 </p>
+</li>
+<li><p>rm -rf 非空目录名 删除一个非空目录下的一切 </p>
+</li>
+<li><p>mv 路经/文件 /经/文件移动相对路经下的文件到绝对路经下 </p>
+</li>
+<li><p>mv 文件名 新名称 在当前目录下改名 </p>
+</li>
+<li><p>find 路经 -name “字符串” 查找路经所在范围内满足字符串匹配的文件和目录 </p>
+</li>
+</ul>
+<h3 id="二、系统管理"><a href="#二、系统管理" class="headerlink" title="二、系统管理"></a>二、系统管理</h3><ul>
+<li><p>fdisk fdisk -l 查看系统分区信息 </p>
+</li>
+<li><p>fdisk fdisk /dev/sdb 为一块新的SCSI硬盘进行分区 </p>
+</li>
+<li><p>chown chown root /home 把/home的属主改成root用户 </p>
+</li>
+<li><p>chgrp chgrp root /home 把/home的属组改成root组 </p>
+</li>
+<li><p>Useradd 创建一个新的用户 </p>
+</li>
+<li><p>Groupadd 组名 创建一个新的组 </p>
+</li>
+<li><p>Passwd 用户名 为用户创建密码 </p>
+</li>
+<li><p>Passwd -d用户名 删除用户密码也能登陆 </p>
+</li>
+<li><p>Passwd -S用户名 查询账号密码 </p>
+</li>
+<li><p>Usermod -l 新用户名 老用户名 为用户改名 </p>
+</li>
+<li><p>Userdel–r 用户名 删除用户一切 </p>
+</li>
+<li><p>service [servicename] start/stop/restart 系统服务控制操作 </p>
+</li>
+<li><p>/etc/init.d/[servicename] start/stop/restart 系统服务控制操作 </p>
+</li>
+<li><p>uname -a 查看内核版本 </p>
+</li>
+<li><p>cat /etc/issue 查看ubuntu版本 </p>
+</li>
+<li><p>lsusb 查看usb设备 </p>
+</li>
+<li><p>sudo ethtool eth0 查看网卡状态 </p>
+</li>
+<li><p>cat /proc/cpuinfo 查看cpu信息 </p>
+</li>
+<li><p>lshw 查看当前硬件信息 </p>
+</li>
+<li><p>sudo fdisk -l 查看磁盘信息 </p>
+</li>
+<li><p>df -h 查看硬盘剩余空间 </p>
+</li>
+<li><p>free -m 查看当前的内存使用情况 </p>
+</li>
+<li><p>ps -A 查看当前有哪些进程 </p>
+</li>
+<li><p>kill 进程号(就是ps -A中的第一列的数字)或者 killall 进程名( 杀死一个进程) </p>
+</li>
+<li><p>kill -9 进程号 强制杀死一个进程 </p>
+</li>
+<li><p>reboot Init 6 重启LINUX系统 </p>
+</li>
+<li><p>Halt Init 0 Shutdown –h now 关闭LINUX系统 </p>
+</li>
+</ul>
+<h3 id="三、打包-解压"><a href="#三、打包-解压" class="headerlink" title="三、打包/解压"></a>三、打包/解压</h3><ul>
+<li>tar -c 创建包 –x 释放包 -v 显示命令过程 –z 代表压缩包 </li>
+<li>tar –cvf benet.tar /home/benet 把/home/benet目录打包 </li>
+<li>tar –zcvf benet.tar.gz /mnt 把目录打包并压缩 </li>
+<li>tar –zxvf benet.tar.gz 压缩包的文件解压恢复 </li>
+<li>tar –jxvf benet.tar.bz2 解压缩 </li>
+</ul>
+<h3 id="四、make编译"><a href="#四、make编译" class="headerlink" title="四、make编译"></a>四、make编译</h3><ul>
+<li>make 编译 </li>
+<li>make install 安装编译好的源码包 </li>
+</ul>
+<h3 id="五、apt命令"><a href="#五、apt命令" class="headerlink" title="五、apt命令"></a>五、apt命令</h3><ul>
+<li>apt-cache search package 搜索包 </li>
+<li>apt-cache show package 获取包的相关信息，如说明、大小、版本等 </li>
+<li>sudo apt-get install package 安装包 </li>
+<li>sudo apt-get install package - - reinstall 重新安装包 </li>
+<li>sudo apt-get -f install 修复安装”-f = –fix-missing” </li>
+<li>sudo apt-get remove package 删除包 </li>
+<li>sudo apt-get remove package - - purge 删除包，包括删除配置文件等 </li>
+<li>sudo apt-get update 更新源 </li>
+<li>sudo apt-get upgrade 更新已安装的包 </li>
+<li>sudo apt-get dist-upgrade 升级系统 </li>
+<li>sudo apt-get dselect-upgrade 使用 dselect 升级 </li>
+<li>apt-cache depends package 了解使用依赖 </li>
+<li>apt-cache rdepends package 是查看该包被哪些包依赖 </li>
+<li>sudo apt-get build-dep package 安装相关的编译环境 </li>
+<li>apt-get source package 下载该包的源代码 </li>
+<li>sudo apt-get clean &amp;&amp; sudo apt-get autoclean 清理无用的包 </li>
+<li>sudo apt-get check 检查是否有损坏的依赖 </li>
+<li>sudo apt-get clean 清理所有软件缓存（即缓存在/var/cache/apt/archives目录里的deb包）</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://watfall.github.io/2019/07/09/Django项目之Dailyfresh实战日志二/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -379,7 +666,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  299
+                  307
                 </span>
               
 
@@ -425,7 +712,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"># /user/register</span><br><span class="line">def register(request):</span><br><span class="line">    &quot;&quot;&quot;注册&quot;&quot;&quot;</span><br><span class="line">    if request.method == &apos;GET&apos;:</span><br><span class="line">        return render(request, &apos;register.html&apos;)  # 显示注册页面</span><br><span class="line">    else:</span><br><span class="line">        # 进行注册处理</span><br><span class="line">        # 接收数据</span><br><span class="line">        username = request.POST.get(&apos;user_name&apos;)</span><br><span class="line">        password = request.POST.get(&apos;pwd&apos;)</span><br><span class="line">        email = request.POST.get(&apos;email&apos;)</span><br><span class="line">        allow = request.POST.get(&apos;allow&apos;)</span><br><span class="line"></span><br><span class="line">        # 进行数据校验</span><br><span class="line">        if not all([username, password, email]):</span><br><span class="line">            # 数据不完整</span><br><span class="line">            return render(request, &apos;register.html&apos;, &#123;&apos;errmsg&apos;: &apos;数据不完整&apos;&#125;)</span><br><span class="line"></span><br><span class="line">        # 检验邮箱</span><br><span class="line">        if not re.match(r&apos;^[a-z0-9][\w.\-]*@[a-z0-9\-]+(\.[a-z]&#123;2,5&#125;)&#123;1,2&#125;$&apos;, email):</span><br><span class="line">            return render(request, &apos;register.html&apos;, &#123;&apos;errmsg&apos;: &apos;邮箱格式不正确&apos;&#125;)</span><br><span class="line"></span><br><span class="line">        if allow != &apos;on&apos;:</span><br><span class="line">            return render(request, &apos;register.html&apos;, &#123;&apos;errmsg&apos;: &apos;请同意协议&apos;&#125;)</span><br><span class="line"></span><br><span class="line">        # 校验用户是否重复</span><br><span class="line">        try:</span><br><span class="line">            user = User.objects.get(username=username)</span><br><span class="line">        except User.DoesNotExist:</span><br><span class="line">            # 用户名不存在</span><br><span class="line">            user = None</span><br><span class="line"></span><br><span class="line">        if user:</span><br><span class="line">            return render(request, &apos;register.html&apos;, &#123;&apos;errmsg&apos;: &apos;用户已存在&apos;&#125;)</span><br><span class="line"></span><br><span class="line">        # 进行业务处理：进行用户注册</span><br><span class="line">        user = User.objects.create_user(username, email, password)</span><br><span class="line">        user.is_active = 0</span><br><span class="line">        user.save()</span><br><span class="line"></span><br><span class="line">        # 返回应答,跳转首页</span><br><span class="line">        return redirect(reverse(&apos;goods:index&apos;))</span><br></pre></td></tr></table></figure>
 
 <p>编辑template目录下register.html模版，这是一个手工活。</p>
-
+<h3 id="user下views-py文件RegisterView类视图"><a href="#user下views-py文件RegisterView类视图" class="headerlink" title="user下views.py文件RegisterView类视图"></a>user下views.py文件RegisterView类视图</h3>
           
         
       
@@ -703,7 +990,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -714,7 +1001,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -725,7 +1012,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -806,7 +1093,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">907</span>
+    <span title="Site words total count">1.8k</span>
   
 </div>
 

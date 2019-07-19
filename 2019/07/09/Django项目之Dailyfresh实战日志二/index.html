@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="抠脚大叔的“胶水”坊">
 <meta property="og:description" content="user应用 关于注册  user下views.py文件register视图函数 123456789101112131415161718192021222324252627282930313233343536373839404142# /user/registerdef register(request):    &amp;quot;&amp;quot;&amp;quot;注册&amp;quot;&amp;quot;&amp;quot;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-07-09T09:24:18.030Z">
+<meta property="og:updated_time" content="2019-07-09T09:59:37.730Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Django项目之Dailyfresh实战日志二">
 <meta name="twitter:description" content="user应用 关于注册  user下views.py文件register视图函数 123456789101112131415161718192021222324252627282930313233343536373839404142# /user/registerdef register(request):    &amp;quot;&amp;quot;&amp;quot;注册&amp;quot;&amp;quot;&amp;quot;">
@@ -383,7 +383,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  299
+                  307
                 </span>
               
 
@@ -427,7 +427,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"># /user/register</span><br><span class="line">def register(request):</span><br><span class="line">    &quot;&quot;&quot;注册&quot;&quot;&quot;</span><br><span class="line">    if request.method == &apos;GET&apos;:</span><br><span class="line">        return render(request, &apos;register.html&apos;)  # 显示注册页面</span><br><span class="line">    else:</span><br><span class="line">        # 进行注册处理</span><br><span class="line">        # 接收数据</span><br><span class="line">        username = request.POST.get(&apos;user_name&apos;)</span><br><span class="line">        password = request.POST.get(&apos;pwd&apos;)</span><br><span class="line">        email = request.POST.get(&apos;email&apos;)</span><br><span class="line">        allow = request.POST.get(&apos;allow&apos;)</span><br><span class="line"></span><br><span class="line">        # 进行数据校验</span><br><span class="line">        if not all([username, password, email]):</span><br><span class="line">            # 数据不完整</span><br><span class="line">            return render(request, &apos;register.html&apos;, &#123;&apos;errmsg&apos;: &apos;数据不完整&apos;&#125;)</span><br><span class="line"></span><br><span class="line">        # 检验邮箱</span><br><span class="line">        if not re.match(r&apos;^[a-z0-9][\w.\-]*@[a-z0-9\-]+(\.[a-z]&#123;2,5&#125;)&#123;1,2&#125;$&apos;, email):</span><br><span class="line">            return render(request, &apos;register.html&apos;, &#123;&apos;errmsg&apos;: &apos;邮箱格式不正确&apos;&#125;)</span><br><span class="line"></span><br><span class="line">        if allow != &apos;on&apos;:</span><br><span class="line">            return render(request, &apos;register.html&apos;, &#123;&apos;errmsg&apos;: &apos;请同意协议&apos;&#125;)</span><br><span class="line"></span><br><span class="line">        # 校验用户是否重复</span><br><span class="line">        try:</span><br><span class="line">            user = User.objects.get(username=username)</span><br><span class="line">        except User.DoesNotExist:</span><br><span class="line">            # 用户名不存在</span><br><span class="line">            user = None</span><br><span class="line"></span><br><span class="line">        if user:</span><br><span class="line">            return render(request, &apos;register.html&apos;, &#123;&apos;errmsg&apos;: &apos;用户已存在&apos;&#125;)</span><br><span class="line"></span><br><span class="line">        # 进行业务处理：进行用户注册</span><br><span class="line">        user = User.objects.create_user(username, email, password)</span><br><span class="line">        user.is_active = 0</span><br><span class="line">        user.save()</span><br><span class="line"></span><br><span class="line">        # 返回应答,跳转首页</span><br><span class="line">        return redirect(reverse(&apos;goods:index&apos;))</span><br></pre></td></tr></table></figure>
 
 <p>编辑template目录下register.html模版，这是一个手工活。</p>
-
+<h3 id="user下views-py文件RegisterView类视图"><a href="#user下views-py文件RegisterView类视图" class="headerlink" title="user下views.py文件RegisterView类视图"></a>user下views.py文件RegisterView类视图</h3>
       
     </div>
     
@@ -470,6 +470,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/20/Ubuntu常用命令大全/" rel="prev" title="Ubuntu常用命令大全">
+                Ubuntu常用命令大全 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -548,7 +552,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -559,7 +563,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">分类</span>
                 </a>
               </div>
@@ -570,7 +574,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
@@ -633,7 +637,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#user应用"><span class="nav-number">1.</span> <span class="nav-text">user应用</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#user应用"><span class="nav-number">1.</span> <span class="nav-text">user应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#user下views-py文件RegisterView类视图"><span class="nav-number">1.1.</span> <span class="nav-text">user下views.py文件RegisterView类视图</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -667,7 +671,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">907</span>
+    <span title="Site words total count">1.8k</span>
   
 </div>
 
